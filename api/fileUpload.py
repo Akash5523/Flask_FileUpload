@@ -12,6 +12,8 @@ app = Flask(__name__)
 
 app.config.from_object(Config)
 
+app.config['UPLOAD_FOLDER'] = '/tmp/uploads'
+
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'doc', 'docx', 'pptx', 'xlsx', 'csv', 'docx'}
